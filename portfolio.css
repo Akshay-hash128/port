@@ -19,10 +19,14 @@ header {
 
 .animated-header {
     opacity: 0;
-}
-
-.slideIn {
-    animation: slideInAnimation 1s ease forwards;
+    animation-name: slideInAnimation;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
 }
 
 @keyframes slideInAnimation {
