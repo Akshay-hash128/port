@@ -19,17 +19,20 @@ header {
 
 .animated-header {
     opacity: 0;
-    animation: slideIn 1s forwards;
 }
 
-@keyframes slideIn {
+.slideIn {
+    animation: slideInAnimation 1s ease forwards;
+}
+
+@keyframes slideInAnimation {
     from {
-        transform: translateX(-100%);
         opacity: 0;
+        transform: translateX(-100%);
     }
     to {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateX(0);
     }
 }
 
