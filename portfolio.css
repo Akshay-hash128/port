@@ -19,24 +19,19 @@ header {
 
 .animated-header {
     opacity: 0;
-    animation-name: slideInAnimation;
-    animation-duration: 5s;
-    animation-timing-function: ease;
-    animation-delay: 0.5s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
+    animation: focus-in-expand 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
 }
 
-@keyframes slideInAnimation {
-    from {
+@keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        filter: blur(12px);
         opacity: 0;
-        transform: translateX(-100%);
     }
-    to {
+    100% {
+        letter-spacing: initial;
+        filter: blur(0px);
         opacity: 1;
-        transform: translateX(0);
     }
 }
 
