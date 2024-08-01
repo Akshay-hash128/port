@@ -47,8 +47,7 @@ section {
 
 #portfolio h2 {
     position: relative;
-    z-index: 2.5;
-    
+    z-index: 2;
 }
 
 .projects {
