@@ -45,9 +45,10 @@ section {
     margin: 40px 0;
 }
 
-#portfolio h2 {
+portfolio h2 {
     position: relative;
-    z-index: 2;
+    z-index: 2.5;
+    
 }
 
 .projects {
