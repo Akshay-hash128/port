@@ -2,6 +2,8 @@ body {
     font-family: 'General Sans', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
@@ -18,7 +20,6 @@ header {
 }
 
 .animated-header {
-    font-family: 'Satoshi', sans-serif;
     opacity: 0;
     animation: focus-in-expand 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
 }
@@ -38,33 +39,48 @@ header {
 
 h1, h2, h3 {
     margin: 0;
-    font-family: 'Satoshi', sans-serif;
 }
 
 section {
     margin: 40px 0;
 }
 
+#portfolio h2 {
+    position: relative;
+    z-index: 2;
+}
+
 .projects {
     display: flex;
     gap: 20px;
+    justify-content: space-between;
 }
 
 .project {
-    flex: 1;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 8px;
-    transition: transform 0.2s;
-}
-
-.project:hover {
-    transform: scale(1.05);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
 .project img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.project h3, .project p {
+    position: relative;
+    z-index: 2;
+}
+
+.project:hover {
+    z-index: 3;
+    transform: scale(1.05);
+}
+
+.project:hover img {
+    transform: scale(1.1);
 }
 
 form {
@@ -78,10 +94,4 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f1f1f1;
 }
