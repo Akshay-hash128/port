@@ -19,9 +19,9 @@
 
 /* Image inside each project */
 .project img {
-    width: auto; /* Ensure the image fills the container width */
+    width: 20%; /* Ensure the image fills the container width */
     max-width: 300px; /* Adjust as needed to control maximum size */
-    height: auto; /* Maintain aspect ratio */
+    height: 20%; /* Maintain aspect ratio */
     border-radius: 15px 15px 0 0; /* Rounded corners for top */
     transition: transform 0.3s ease;
     /* Center the image within the project */
