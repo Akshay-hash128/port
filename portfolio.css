@@ -145,3 +145,35 @@ project-details a {
 project-details a:hover {
     text-decoration: underline;
 }
+
+.project {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center content within the project */
+}
+
+.project img {
+    max-width: 100%; /* Ensure the image does not exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a maximum height for the image */
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
+    display: block; /* Ensure images are block-level elements for centering */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.project h3, .project p {
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
