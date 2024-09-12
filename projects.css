@@ -9,14 +9,15 @@
 }
 
 .project-container img {
-    max-width: 40%; /* Resize the image to 40% of the container width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Make sure the image doesn't exceed its container width */
+    width: 400px; /* Set a reasonable width */
+    height: auto; /* Keep the aspect ratio */
     border-radius: 10px;
     object-fit: cover; /* Ensures the image is properly fitted */
 }
 
 .project-info {
-    flex: 1; /* Ensures text takes up the remaining space */
+    flex: 1;
     padding-left: 20px;
 }
 
