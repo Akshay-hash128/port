@@ -1,45 +1,51 @@
+/* Ensure the image and text are side-by-side with proper alignment */
 .project-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: flex-start;
-    gap: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 20px; /* Space between the image and the text */
 }
 
+/* Set image size and styling */
 .project-container img {
-    max-width: 100%; /* Make sure the image doesn't exceed its container width */
-    width: 400px; /* Set a reasonable width */
-    height: auto; /* Keep the aspect ratio */
+    max-width: 400px; /* Set the max width of the image */
+    width: 100%; /* Make it responsive */
+    height: auto; /* Keep aspect ratio */
     border-radius: 10px;
-    object-fit: cover; /* Ensures the image is properly fitted */
+    object-fit: cover;
 }
 
+/* Styling for the text next to the image */
 .project-info {
     flex: 1;
     padding-left: 20px;
 }
 
-h2 {
+.project-info h2 {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-p {
-    font-size: 1.1em;
+.project-info p {
+    font-size: 1.2em;
     color: #666;
+    line-height: 1.5;
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .project-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack image and text vertically */
         text-align: center;
     }
 
     .project-container img {
         max-width: 80%;
-        margin: 0 auto;
+        margin: 0 auto; /* Center the image */
     }
 
     .project-info {
