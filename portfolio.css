@@ -54,37 +54,35 @@ section {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .project {
-    position: relative;
-    z-index: 1;
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
+    text-align: center;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .project img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0 0;
     transition: transform 0.3s ease;
 }
 
 .project h3, .project p {
-    position: relative;
-    z-index: 2;
     padding: 15px;
     margin: 0;
-    color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: #333;
 }
 
 .project:hover {
-    z-index: 3;
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
@@ -105,75 +103,3 @@ button {
     border: none;
     cursor: pointer;
 }
-
-project-details {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-project-details h2 {
-    margin-bottom: 20px;
-}
-
-project-details p {
-    margin-bottom: 20px;
-}
-
-project-details .media-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-project-details .media-container img,
-project-details .media-container video {
-    width: 100%;
-    border-radius: 15px;
-}
-
-project-details a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-project-details a:hover {
-    text-decoration: underline;
-}
-
-.project {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; /* Center content within the project */
-}
-
-.project img {
-    max-width: 100%; /* Ensure the image does not exceed the container's width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 200px; /* Set a maximum height for the image */
-    border-radius: 15px 15px 0 0;
-    transition: transform 0.3s ease;
-    display: block; /* Ensure images are block-level elements for centering */
-    margin: 0 auto; /* Center the image horizontally */
-}
-
-.project h3, .project p {
-    position: relative;
-    z-index: 2;
-    padding: 15px;
-    margin: 0;
-    color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
