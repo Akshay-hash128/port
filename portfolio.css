@@ -1,3 +1,10 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'General Sans', sans-serif;
     margin: 0;
@@ -37,17 +44,15 @@ header {
     }
 }
 
-h1, h2, h3 {
-    margin: 0;
-}
-
 section {
     margin: 40px 0;
 }
 
 #portfolio h2 {
-    position: relative;
-    z-index: 2;
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .projects {
@@ -58,28 +63,51 @@ section {
 }
 
 .project {
+    position: relative;
     flex: 1;
     min-width: 280px;
     max-width: 320px;
     text-align: center;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.05);
     border-radius: 10px;
-    transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
+    padding: 20px 10px;
+}
+
+.project-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 0.1);
+    z-index: 1;
 }
 
 .project img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
+    margin-bottom: 15px;
     transition: transform 0.3s ease;
+    z-index: 2;
 }
 
-.project h3, .project p {
-    padding: 15px;
-    margin: 0;
+.project h3 {
+    font-size: 1.2em;
     color: #333;
+    margin: 10px 0 5px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.project p {
+    font-size: 0.9em;
+    color: #555;
+    padding: 0 10px;
+    z-index: 2;
 }
 
 .project:hover {
@@ -89,6 +117,12 @@ section {
 
 .project:hover img {
     transform: scale(1.1);
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 form {
